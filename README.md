@@ -40,6 +40,9 @@
         "editor.acceptSuggestionOnEnter": "off"
     }
 }
+11. logging.ts 작성
+12. config.ts 작성
+13. server.ts 생성
 
 
 ```
