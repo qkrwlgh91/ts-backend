@@ -62,8 +62,10 @@ const MONGO_OPRIONS = {
     autoIndex: false,
     retryWrites: false
 };
-21: mongodb 사용 설정
-
+21. mongodb 사용 설정
+22. monggose connect(url, oprtions) in server.ts 
+23. interfaces 작성
+24. Schema in models 작성
 
 * 실행 nodemon source/server.ts
 ```
