@@ -43,6 +43,10 @@
 11. logging.ts 작성
 12. config.ts 작성
 13. server.ts 생성
+14. controller 폴더 생성
+15. routes 폴더 생성
+16. server.ts에 route basic경로 생성 및 import
 
 
+* 실행 nodemon source/server.ts
 ```

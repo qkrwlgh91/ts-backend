@@ -3,6 +3,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import logging from './config/logging';
 import config from './config/config';
+import sampleRoutes from './routes/sample';
 
 const NAMESPACE = 'Server';
 const router = express();
@@ -13,7 +14,6 @@ router.use((req, res, next) => {
 
     res.on('finish', () => {
         logging.info(NAMESPACE, `METHOD - [${req.method}], URL - [${req.url}], IP - [${req.socket.remoteAddress}], STATUS - [${res.statusCode}]`);
-
     });
 
     next();
@@ -37,6 +37,7 @@ router.use((req, res, next) => {
 });
 
 /** Routes */
+router.use('/sample', sampleRoutes);
 
 /** Error Handling */
 router.use((req, res, next) => {
@@ -45,10 +46,8 @@ router.use((req, res, next) => {
     return res.status(404).json({
         message: error.message
     });
-
 });
 
 /** Create the server */
 const httpServer = http.createServer(router);
-httpServer.listen(config.server.port, () => logging.info(NAMESPACE, `Server running on ${config.server.hostname}:${config.server.port}`))
-
+httpServer.listen(config.server.port, () => logging.info(NAMESPACE, `Server running on ${config.server.hostname}:${config.server.port}`));
