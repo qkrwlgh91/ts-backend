@@ -46,6 +46,23 @@
 14. controller 폴더 생성
 15. routes 폴더 생성
 16. server.ts에 route basic경로 생성 및 import
+17. npm run build
+
+
+-----------  mongodb  -------------
+18. npm i mongoose
+19. npm i --save-dev @types/mongoose
+20. config.ts에 mongo connection option을 넣어줌
+const MONGO_OPRIONS = {
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
+    socketTimeoutMS: 30000,
+    keepAlive: true,
+    poolSize: 50,
+    autoIndex: false,
+    retryWrites: false
+};
+21: mongodb 사용 설정
 
 
 * 실행 nodemon source/server.ts
