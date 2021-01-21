@@ -67,5 +67,9 @@ const MONGO_OPRIONS = {
 23. interfaces 작성
 24. Schema in models 작성
 
+---------------- Authentication with json web tokens --------------
+25. npm install bcrypt.js jsonwebtoken
+26. npm install --save-dev @types/jsonwebtoken @types/bcryptjs
+
 * 실행 nodemon source/server.ts
 ```
